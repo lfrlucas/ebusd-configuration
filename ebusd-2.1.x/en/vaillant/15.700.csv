@@ -14,7 +14,7 @@ r;w,,AdaptHeatCurve,adaptive heat curve,,,,1400,,,yesno,,,automatic correction o
 r;w,,MaxCylinderChargeTime,maximale Speicherladezeit,,,,1700,,,minutes2,,,maximum cylinder charging time
 r;w,,HwcLockTime,hwc lock time,,,,1800,,,minutes2,,,Sperrzeit WW-Bedarf
 r;w,,PumpAdditionalTime,pump additional time,,,,1B00,,,minutes2,,,Ladepumpe Nachlaufzeit
-r;w,,CylinderChargeHyst,hysteresis cylinder charge,,,,2700,,,calibrationv,,,Hysterese Speicherladung
+r5;w,,CylinderChargeHyst,hysteresis cylinder charge,,,,2700,,,calibrationv,,,Hysterese Speicherladung
 r;w,,CylinderChargeOffset,offset cylinder charge,,,,2900,,,calibrationv,,,Speicherlad. Offset
 r;w,,MaintenanceDate,next maintenance,,,,2C00,,,date,,,Datum nächste Wartung
 r;w,,Date,date,,,,3400,,,date,,,Aktuelles Datum
@@ -52,10 +52,10 @@ r;w,,PhoneNumber1,phone number 1,,,,6F00,,,shortphone,,,installer's telephone nu
 r;w,,PhoneNumber2,phone number 2,,,,7000,,,shortphone,,,installer's telephone number
 r;w,,HolidayStartPeriod,holiday start period,,,,7100,,,hfrom,,,start date of holidays
 r;w,,HolidayEndPeriod,holiday end period,,,,7200,,,hto,,,end date of holidays
-r,,DisplayedOutsideTemp,outside temperature,,,,7300,,,tempv,,,Außentemperatur
+r1,,DisplayedOutsideTemp,outside temperature,,,,7300,,,tempv,,,Außentemperatur
 r;w,,SFMode,SF mode,,,,7400,,,sfmode,,,
 r;w,,KeyCodeforConfigMenu,code for installer menu,,,,7600,,,UIN,,,000-999; code for the installer's menues
-r;w,,OpMode,operation mode,,,,7b00,,,opmode,,,operation mode of all/configured zone(s) matching OpModeEffect
+r1;w,,OpMode,operation mode,,,,7b00,,,opmode,,,operation mode of all/configured zone(s) matching OpModeEffect
 r;w,,OpModeCooling,operation mode for cooling,,,,7c00,,,opmode,,,operation mode for cooling of all/configured zone(s)
 r;w,,OpModeVentilation,operation mode for ventilation,,,,1600,,,opmode,,,operation mode for ventilation of all/configured zone(s)
 r;w,,HolidayTemp,holiday temperature,,,,8200,,,tempv,,,holiday setpoint
@@ -71,10 +71,10 @@ r,,HcStorageTempBottom,hc storage temperature bottom,,,,A000,,,tempv,,,"Temp.fü
 # ##### hot water circuit #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000100,,,IGN:4,,,
 *w,,,,,,B524,02010100,,,,,,
-r;w,,HwcOpMode,hwc operation mode,,,,0300,,,opmode,,,operation mode of Hwc
-r;w,,HwcTempDesired,hwc temperature desired,,,,0400,,,tempv,,,setpoint of domestic hot water circuit
-r,,HwcStorageTemp,hwc storage temperature,,,,0500,,,tempv,,,Speicheristtemperatur
-r,,HwcFlowTemp,hwc flow temperature,,,,0800,,,tempv,,,desired flow temp for Hwc
+r3;w,,HwcOpMode,hwc operation mode,,,,0300,,,opmode,,,operation mode of Hwc
+r3;w,,HwcTempDesired,hwc temperature desired,,,,0400,,,tempv,,,setpoint of domestic hot water circuit
+r1,,HwcStorageTemp,hwc storage temperature,,,,0500,,,tempv,,,Speicheristtemperatur
+r1,,HwcFlowTemp,hwc flow temperature,,,,0800,,,tempv,,,desired flow temp for Hwc
 r;w,,HwcHolidayStartPeriod,hwc holiday start period,,,,0900,,,hfrom,,,start date of holidays
 r;w,,HwcHolidayEndPeriod,hwc holiday end period,,,,0A00,,,hto,,,end date of holidays
 r;w,,HwcBankHolidayStartPeriod,hwc bank holiday start period,,,,0B00,,,hfrom,,,start date of bank holidays
@@ -85,8 +85,8 @@ r;w,,HwcSFMode,hwc SF mode,,,,0D00,,,sfmode,,,
 *w,,,,,,B524,02010200,,,,,,
 r,,Hc1CircuitType,CircuitType heating circuit 1,,,,0200,,,mctype;IGN:1,,,
 #r;w,,Hc1Unknown04,(constant 30) temperature heating circuit 1,,,,0400,,,tempv,,,unknown value for Hc1
-r,,Hc1ActualFlowTempDesired,ActualFlowTempDesired heating circuit 1,,,,0700,,,tempv,,,current flow temperature setpoint of Hc1
-r,,Hc1FlowTemp,FlowTemp heating circuit 1,,,,0800,,,tempv,,,current flow temperature of Hc1
+r5,,Hc1ActualFlowTempDesired,ActualFlowTempDesired heating circuit 1,,,,0700,,,tempv,,,current flow temperature setpoint of Hc1
+r5,,Hc1FlowTemp,FlowTemp heating circuit 1,,,,0800,,,tempv,,,current flow temperature of Hc1
 #r;w,,Hc1Unknown09,(constant 60) temperature,,,,0900,,,tempv,,,unknown value for Hc1
 r;w,,Hc1ExcessTemp,ExcessTemp heating circuit 1,,,,0B00,,,calibrationv,,,excess temperature of Hc1 (flow temperature's setpoint is increased by this value to keep the mixing valve in its control range)
 #r;w,,Hc1Unknown0c,(constant 65) temperature heating circuit 1,,,,0C00,,,tempv,,,unknown value for Hc1
@@ -100,8 +100,8 @@ r;w,,Hc1SummerTempLimit,summer outside switchoff temperature heating circuit 1,,
 r;w,,Hc1RoomTempSwitchOn,RoomTempSwitchOn heating circuit 1,,,,1500,,,rcmode,,,room temperature modulation of Hc1
 r,,Hc1MixerMovement,MixerMovement heating circuit 1,,,,1A00,,,EXP,,,"status of mixer (<0 closing, >0 opening)"
 r,,Hc1HeatCurveAdaption,HeatCurveAdaption heating circuit 1,,,,1C00,,,EXP,,,adaption applied to heating curve of Hc1
-r;w,,Hc1Status,Status heating circuit 1,,,,1B00,,,UCH,,,status of zone 1
-r;w,,Hc1PumpStatus,PumpStatus heating circuit 1,,,,1E00,,,UIN,,,pump status of zone 1
+r1;w,,Hc1Status,Status heating circuit 1,,,,1B00,,,UCH,,,status of zone 1
+r1;w,,Hc1PumpStatus,PumpStatus heating circuit 1,,,,1E00,,,UIN,,,pump status of zone 1
 # ##### heating circuit 2 #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000201,,,IGN:4,,,
 *w,,,,,,B524,02010201,,,,,,
@@ -154,17 +154,17 @@ r;w,,z1CoolingTemp,cooling setpoint zone 1,,,,0200,,,tempv,,,desired cooling set
 r;w,,z1HolidayStartPeriod,holiday period start zone 1,,,,0300,,,hfrom,,,start date of holidays for zone 1
 r;w,,z1HolidayEndPeriod,holiday period end zone 1,,,,0400,,,hto,,,end date of holidays for zone 1
 r;w,,z1HolidayTemp,room setpoint holiday period zone 1,,,,0500,,,tempv,,,holiday setpoint for zone 1
-r;w,,z1OpMode,operation mode zone 1,,,,0600,,,opmode,,,operation mode of zone 1
-r;w,,z1DayTemp,desired temperature zone 1,,,,0700,,,tempv,,,day setpoint for zone 1
+r1;w,,z1OpMode,operation mode zone 1,,,,0600,,,opmode,,,operation mode of zone 1
+r1;w,,z1DayTemp,desired temperature zone 1,,,,0700,,,tempv,,,day setpoint for zone 1
 r;w,,z1QuickVetoTemp,quick veto temperature zone 1,,,,0800,,,tempv,,,manual override setpoint for zone 1
-r;w,,z1NightTemp,night temperature zone 1,,,,0900,,,tempv,,,night setpoint for zone 1
+r1;w,,z1NightTemp,night temperature zone 1,,,,0900,,,tempv,,,night setpoint for zone 1
 r;w,,z1BankHolidayStartPeriod,bank holiday start zone 1,,,,0C00,,,hfrom,,,start date of bank holidays for zone 1
 r;w,,z1BankHolidayEndPeriod,bank holiday end zone 1,,,,0D00,,,hto,,,end date of bank holidays for zone 1
 r;w,,z1SFMode,SF mode zone 1,,,,0E00,,,sfmode,,,
-r,,z1RoomTemp,room temperature zone 1,,,,0F00,,,tempv,,,current room temperature in zone 1
-r;w,,z1ValveStatus,valve status zone 1,,,,1200,,,UCH,,,valve status of zone 1
+r1,,z1RoomTemp,room temperature zone 1,,,,0F00,,,tempv,,,current room temperature in zone 1
+r1;w,,z1ValveStatus,valve status zone 1,,,,1200,,,UCH,,,valve status of zone 1
 r;w,,z1RoomZoneMapping,room zone mapping zone 1,,,,1300,,,zmapping,,,configures which room temperature is assigned to zone 1
-r;w,,z1ActualRoomTempDesired,room temperature desired zone 1,,,,1400,,,tempv,,,current room setpoint considering all basic conditions passed to the control algorithms
+r1;w,,z1ActualRoomTempDesired,room temperature desired zone 1,,,,1400,,,tempv,,,current room setpoint considering all basic conditions passed to the control algorithms
 #r;w,,z1Unknown15Temp,(in noise reduction 24 otherwise 99 - max.air level?) temperature zone 1,,,,1500,,,tempv,,,unknown value for zone 1
 r;w,,z1Shortname,Kurzbezeichnung zone 1,,,,1600,,,shortname,,,short name of zone 1
 r;w,,z1Name1,zone 1 label (first part),,,,1700,,,zname,,,name of zone 1
@@ -249,13 +249,13 @@ r;w,,tariffTimer.Sunday,timer tariff sunday,,,,06,,,slot1-3,,,
 # timers hot water,,,,,,,,,,,,,
 *r,,,,,,B524,03010001,,,IGN:1,,,whether timeslot is valid
 *w,,,,,,B524,04010001,,,,,,
-r;w,,hwcTimer.Monday,timer hwc monday,,,,00,,,slot1-3,,,
-r;w,,hwcTimer.Tuesday,timer hwc tuesday,,,,01,,,slot1-3,,,
-r;w,,hwcTimer.Wednesday,timer hwc wednesday,,,,02,,,slot1-3,,,
-r;w,,hwcTimer.Thursday,timer hwc thursday,,,,03,,,slot1-3,,,
-r;w,,hwcTimer.Friday,timer hwc friday,,,,04,,,slot1-3,,,
-r;w,,hwcTimer.Saturday,timer hwc saturday,,,,05,,,slot1-3,,,
-r;w,,hwcTimer.Sunday,timer hwc sunday,,,,06,,,slot1-3,,,
+r9;w,,hwcTimer.Monday,timer hwc monday,,,,00,,,slot1-3,,,
+r9;w,,hwcTimer.Tuesday,timer hwc tuesday,,,,01,,,slot1-3,,,
+r9;w,,hwcTimer.Wednesday,timer hwc wednesday,,,,02,,,slot1-3,,,
+r9;w,,hwcTimer.Thursday,timer hwc thursday,,,,03,,,slot1-3,,,
+r9;w,,hwcTimer.Friday,timer hwc friday,,,,04,,,slot1-3,,,
+r9;w,,hwcTimer.Saturday,timer hwc saturday,,,,05,,,slot1-3,,,
+r9;w,,hwcTimer.Sunday,timer hwc sunday,,,,06,,,slot1-3,,,
 # Zeitprogramm circulation pump,,,,,,,,,,,,,
 *r,,,,,,B524,03010002,,,IGN:1,,,whether timeslot is valid
 *w,,,,,,B524,04010002,,,,,,
@@ -269,13 +269,13 @@ r;w,,ccTimer.Sunday,timer cc sunday,,,,06,,,slot1-3,,,
 # timers zone 1,,,,,,,,,,,,,
 *r,,,,,,B524,03030002,,,IGN:1,,,whether timeslot is valid
 *w,,,,,,B524,04030002,,,,,,
-r;w,,z1Timer.Monday,timer heating monday,,,,00,,,slot1-3,,,
-r;w,,z1Timer.Tuesday,timer heating tuesday,,,,01,,,slot1-3,,,
-r;w,,z1Timer.Wednesday,timer heating wednesday,,,,02,,,slot1-3,,,
-r;w,,z1Timer.Thursday,timer heating thursday,,,,03,,,slot1-3,,,
-r;w,,z1Timer.Friday,timer heating friday,,,,04,,,slot1-3,,,
-r;w,,z1Timer.Saturday,timer heating saturday,,,,05,,,slot1-3,,,
-r;w,,z1Timer.Sunday,timer heating sunday,,,,06,,,slot1-3,,,
+r9;w,,z1Timer.Monday,timer heating monday,,,,00,,,slot1-3,,,
+r9;w,,z1Timer.Tuesday,timer heating tuesday,,,,01,,,slot1-3,,,
+r9;w,,z1Timer.Wednesday,timer heating wednesday,,,,02,,,slot1-3,,,
+r9;w,,z1Timer.Thursday,timer heating thursday,,,,03,,,slot1-3,,,
+r9;w,,z1Timer.Friday,timer heating friday,,,,04,,,slot1-3,,,
+r9;w,,z1Timer.Saturday,timer heating saturday,,,,05,,,slot1-3,,,
+r9;w,,z1Timer.Sunday,timer heating sunday,,,,06,,,slot1-3,,,
 *r,,,,,,B524,03030001,,,IGN:1,,,whether timeslot is valid
 *w,,,,,,B524,04030001,,,,,,
 r;w,,z1CoolingTimer.Monday,timer cooling monday,,,,00,,,slot1-3,,,
